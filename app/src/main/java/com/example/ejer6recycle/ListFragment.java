@@ -3,10 +3,18 @@ package com.example.ejer6recycle;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+
+import com.example.ejer6recycle.databinding.FragmentListBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +66,30 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        FragmentListBinding binding = FragmentListBinding.inflate(getActivity().getLayoutInflater());
+
+        MyWordsAdapter adapter= new MyWordsAdapter();
+        adapter.setData(getDataWords());
+
+        binding.recyclerView.setAdapter(adapter);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
+        binding.recyclerView.addItemDecoration(new DividerItemDecoration(binding.recyclerView.getContext(), DividerItemDecoration.VERTICAL));
+
+        return binding.getRoot();
+    }
+
+
+    private List<String>  getDataWords(){
+        List<String> words = new ArrayList<>();
+
+        words.add("sandia");
+        words.add("manzana");
+        words.add("melon");
+        words.add("banana");
+        words.add("pera");
+        words.add("naranja");
+
+ return  words;
+
     }
 }
