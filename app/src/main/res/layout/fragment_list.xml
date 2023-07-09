@@ -12,10 +12,11 @@
         style="@style/textViewStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#A8843B"
+        android:background="@drawable/lol"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Cesta de frutas"
+        android:textColor="#0F3301"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
