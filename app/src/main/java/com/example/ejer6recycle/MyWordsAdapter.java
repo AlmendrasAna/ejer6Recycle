@@ -1,6 +1,8 @@
 package com.example.ejer6recycle;
 
 
+import static java.lang.Integer.parseInt;
+
 import android.content.ClipData;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -61,7 +63,21 @@ private List<String> words;
         @Override
         public void onClick(View v) {
             int posicion = getLayoutPosition();
-            words.set(posicion, words.get(posicion) +" Clicked");
+            boolean resultado =  words.get(posicion).contains("0");
+
+            if(resultado){
+int contador =    words.get(posicion).indexOf("0") ;
+
+              int contador2= parseInt(words.get(posicion).substring(contador +1));
+            contador2++;
+                words.set(posicion, words.get(posicion).substring(0,contador+1)+contador2);
+            }
+else{
+                words.set(posicion, words.get(posicion) +" Clicked 0" + 1);
+        }
+
+
+
             String words2 =  words.get(posicion);
             itemBinding.dataTxtView.setText(words2);
 
