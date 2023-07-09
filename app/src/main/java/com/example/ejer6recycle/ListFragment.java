@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.example.ejer6recycle.databinding.FragmentListBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +24,8 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class ListFragment extends Fragment {
-
+    private FragmentListBinding binding;
+    private List<String> words = new ArrayList<>();
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -66,7 +69,7 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        FragmentListBinding binding = FragmentListBinding.inflate(getActivity().getLayoutInflater());
+        binding = FragmentListBinding.inflate(getActivity().getLayoutInflater());
 
         MyWordsAdapter adapter= new MyWordsAdapter();
         adapter.setData(getDataWords());
@@ -74,20 +77,82 @@ public class ListFragment extends Fragment {
         binding.recyclerView.setAdapter(adapter);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         binding.recyclerView.addItemDecoration(new DividerItemDecoration(binding.recyclerView.getContext(), DividerItemDecoration.VERTICAL));
-
+        initListener();
         return binding.getRoot();
+    }
+
+    private void initListener() {
+
+        binding.floatingActionButton.setOnClickListener( v->{
+
+            words.add(ramdonFruit());
+            binding.recyclerView.getAdapter().notifyItemInserted(words.size());
+
+        });
+    }
+
+    private String ramdonFruit() {
+        List<String> fruit = new ArrayList<>();
+        fruit.add("Frambuesa");
+        fruit.add("Fresa");
+        fruit.add("Grosella espinosa");
+        fruit.add("Grosella negra");
+        fruit.add("Grosella roja");
+        fruit.add("Limón");
+        fruit.add("Mandarina");
+        fruit.add("Naranja");
+        fruit.add("Pomelo");
+        fruit.add("Aguacate");
+        fruit.add("Carambola");
+        fruit.add("Chirimoya");
+        fruit.add("Coco");
+        fruit.add("Dátil");
+        fruit.add("Fruta de la pasión");
+        fruit.add("Kiwi");
+        fruit.add("Litchi");
+        fruit.add("Papaya");
+        fruit.add("Piña");
+        fruit.add("Albaricoque");
+        fruit.add("Cereza");
+        fruit.add("Ciruela");
+        fruit.add("Higo");
+        fruit.add("Kaki");
+        fruit.add("Manzana");
+        fruit.add("Nectarina");
+        fruit.add("Níspero");
+        fruit.add("Uva");
+        fruit.add("Almendra");
+        fruit.add("Avellana");
+        fruit.add("Cacahuete");
+        fruit.add("Castaña");
+        fruit.add("Nuez");
+        fruit.add("Pistacho");
+        int size = fruit.size();
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(fruit.size());
+
+
+        //Log.e("ramdonFruit: ", "SS"+String.valueOf(randomIndex));
+
+        return fruit.get(randomIndex);
+
     }
 
 
     private List<String>  getDataWords(){
-        List<String> words = new ArrayList<>();
-
         words.add("sandia");
         words.add("manzana");
         words.add("melon");
         words.add("banana");
         words.add("pera");
         words.add("naranja");
+        words.add("mora");
+        words.add("arandanos");
+        words.add("melocoton");
+        words.add("damasco");
+        words.add("maracuya");
+        words.add("pomelo");
 
  return  words;
 
