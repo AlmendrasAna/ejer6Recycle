@@ -145,18 +145,18 @@ public class ListFragment extends Fragment {
 
 
     private List<String>  getDataWords(){
-        words.add("sandia");
-        words.add("manzana");
-        words.add("melon");
-        words.add("banana");
-        words.add("pera");
-        words.add("naranja");
-        words.add("mora");
-        words.add("arandanos");
-        words.add("melocoton");
-        words.add("damasco");
-        words.add("maracuya");
-        words.add("pomelo");
+        words.add("Sandia");
+        words.add("Manzana");
+        words.add("Melon");
+        words.add("Banana");
+        words.add("Pera");
+        words.add("Naranja");
+        words.add("Mora");
+        words.add("Arandanos");
+        words.add("Melocoton");
+        words.add("Damasco");
+        words.add("Maracuya");
+        words.add("Pomelo");
 
  return  words;
 

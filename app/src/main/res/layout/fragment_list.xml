@@ -12,22 +12,24 @@
         style="@style/textViewStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/lol"
+        android:background="@drawable/frut3"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Cesta de frutas"
-        android:textColor="#0F3301"
+        android:textColor="#202020"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -35,29 +37,31 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/white"
-        android:backgroundTint="#BC9C83"
+        android:backgroundTint="#232323"
         android:backgroundTintMode="multiply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="62dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="4dp"
+        android:background="#FFFFFF"
         android:clickable="true"
         android:src="@drawable/apple"
-        app:backgroundTintMode="src_in"
+        app:backgroundTint="#636363"
+        app:backgroundTintMode="multiply"
         app:borderWidth="3dp"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="36dp"
+        app:maxImageSize="50dp"
         app:tint="#FF0303"
         app:useCompatPadding="true" />
 
