@@ -78,8 +78,11 @@ public class ListFragment extends Fragment {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         binding.recyclerView.addItemDecoration(new DividerItemDecoration(binding.recyclerView.getContext(), DividerItemDecoration.VERTICAL));
         initListener();
+
         return binding.getRoot();
     }
+
+
 
     private void initListener() {
 
@@ -87,6 +90,7 @@ public class ListFragment extends Fragment {
 
             words.add(ramdonFruit());
             binding.recyclerView.getAdapter().notifyItemInserted(words.size());
+            binding.recyclerView.smoothScrollToPosition(words.size());
 
         });
     }

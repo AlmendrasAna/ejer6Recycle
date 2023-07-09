@@ -28,7 +28,6 @@ private List<String> words;
     @Override
     public MyWordsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemBinding binding = ItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
-        Log.d("MyAdapterviw", "onCreateViewHolder ----");
         return new ViewHolder(binding);
     }
 
@@ -45,17 +44,27 @@ private List<String> words;
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ItemBinding itemBinding;
         public ViewHolder(ItemBinding binding) {
             super(binding.getRoot());
             itemBinding = binding;
+            itemView.setOnClickListener(this);
 
         }
 
         public void getInfo(String words){
-            Log.d("MyAdapter", words);
+
             itemBinding.dataTxtView.setText(words);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int posicion = getLayoutPosition();
+            words.set(posicion, words.get(posicion) +" Clicked");
+            String words2 =  words.get(posicion);
+            itemBinding.dataTxtView.setText(words2);
+
         }
     }
 }
