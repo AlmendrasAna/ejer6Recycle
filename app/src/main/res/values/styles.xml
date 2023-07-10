@@ -2,7 +2,7 @@
 <resources>
 
     <style name="textViewStyle">
-        <item name="android:textColor">#B1B1B1</item>
+        <item name="android:textColor">@color/beige</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
     </style>
