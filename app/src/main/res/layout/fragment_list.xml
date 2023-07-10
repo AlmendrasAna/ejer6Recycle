@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:foregroundTint="#00C853"
+    android:foregroundTintMode="src_over"
     tools:context=".ListFragment">
 
 
@@ -16,7 +18,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Cesta de frutas"
-        android:textColor="#202020"
+        android:textColor="#CAEDB2"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +39,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/white"
-        android:backgroundTint="#232323"
+        android:backgroundTint="#194C2E"
         android:backgroundTintMode="multiply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,15 +50,15 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:layout_width="62dp"
-        android:layout_height="85dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="4dp"
-        android:background="#FFFFFF"
+        android:background="#4BBF7B"
         android:clickable="true"
         android:src="@drawable/apple"
-        app:backgroundTint="#636363"
-        app:backgroundTintMode="multiply"
+        app:backgroundTint="#01AA48"
+        app:backgroundTintMode="src_over"
         app:borderWidth="3dp"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
