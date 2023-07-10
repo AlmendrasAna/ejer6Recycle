@@ -2,9 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="green_olive">#7D8811</color>
-    <color name="beige">#F3E0C2</color>
-    <color name="orange">#F98813</color>
-    <color name="green_black">#484E10</color>
-    <color name="green_lim">#C1D92E</color>
+    <color name="green_olive">#888C11</color>
+    <color name="beige">#F2E2C4</color>
+    <color name="orange">#F2A516</color>
+    <color name="green_black">#3E400F</color>
+    <color name="green_lim">#C5D932</color>
 </resources>
